@@ -1,0 +1,80 @@
+junk file
+.container {
+    width: 90%;
+    margin-top: 0px auto;
+    /*background-color: #C6C6B1;*/
+    /*opacity: .9;*/
+}
+.header{
+ display: block;   
+}
+
+@font-face {
+  font-family: 'Something Strange';
+  src: url('Something Strange') format('truetype');
+}
+
+.row .middle{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.header .col-lg-8 {
+    display: block; 
+    height: 110px;
+}
+.col-lg-6 {
+    height: 250px;
+    display: block;
+    border: 1px solid white;
+}
+.banner{
+ font-size: 60px;
+    text-align: center;
+    color: red;
+    font-family: "Something Strange";
+}
+
+.footer {
+ display: block;   
+}
+
+
+.col-lg-3 {
+    display: inline-block;
+    height: 100%;
+    overflow:hidden;
+    position:relative;
+}
+.img {
+    hover: height: 540px; width: 500px; position: 100 100;
+}
+.footer-info-left{
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.footer-info-right{
+    color: red;
+    float: right;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.social {
+ height: 20px;
+    width: 20px;
+}
+.pictures {
+    display: block;
+}
+.white {
+    color: white;
+    font-size: 20px;
+}
+.backdrop {
+    background-color: white;
+    opacity: 75%;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="AdPieApp">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>AdPie </title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.3.13/angular-route.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	
+ </head> 
+	
+<body ng-controller="AdPieCtrl">
+	<div class="container">
+		<div class="row">
+  			<div class="container-fluid">
+  				<div class="col-xs-12">
+					<header id="header">
+					<div class="content">
+						<div id="logo"> AdPie</div>
+
+						<nav id="nav">
+						<ul>
+							<li><a href="/#/business" title="Next Section" >Business</a></li>
+							<li><a href="/#/consultants" title="Next Section">Consultants</a></li>
+							<li><a href="/#/customers" title="Next Section">Customers</a></li>
+							<li><a  href="/#/about" title="Next Section">About</a></li>
+							<li><a href="/#/login" title="Next Section"> Login/Register</a></li>
+						</ul>
+						</nav>
+					</div>
+					</header>	
+				</div>
+   			</div>
+   		</div>
+
+		
+  		<div class="row">
+        	<div class="viewer" ng-view></div>
+     	</div>
+    	<div class="row footer">
+        	<div class="col-xs-6">
+	            <p class="footer-info-left">All materials viewable on this site are copyrighted by the owner of the material</p>
+	            <p class="footer-info-left"> Copyright &#169; 2015 AdPie,Inc</p>
+	            <p class="footer-info-right"><a href=""><img src="img/twitter.png" title="Follow us on Twitter" class="social"></a><a href=""><img src="img/facebook.png" title="Follow us on Facebook" class="social"></a><a href="http://www.pinterest.com/"><img src="img/pinterest.png" title="Follow us on Pinterest" class="social"></a></p>
+         	</div>       
+        	<div class="col-xs-6">
+           		<p class="footer-info-right">Welcome to AdPie. <a href="/login"><strong>Try Here</strong></a></p> 
+         	</div> 
+     	</div>
+	</div>
+
+<script src="app.js"></script>
+<script src="js/loginCtrl.js"></script>
+<script src="js/adPieCtrl.js"></script>
+<script src="js/landingCtrl.js"></script>
+<script type="text/javascript" src="js/aboutCtrl.js"></script>
+<script type="text/javascript" src="js/businessCtrl.js"></script>
+<script src="js/consultantsCtrl.js"></script>
+<script type="text/javascript" src="js/customersCtrl.js"></script>
+
+</body>
+</html>
