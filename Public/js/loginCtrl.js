@@ -14,6 +14,11 @@ var refresh = function(){
 			$scope.user.password = "";
 
 };
+var refreshReg = function(){
+			$scope.contact.email = "";
+			$scope.contact.password = "";
+
+};
 refresh();
 
 var user ;
@@ -25,7 +30,7 @@ $scope.login = function(){
 	console.log('user email', user.email);
 	console.log('user password', user.password);
 
-		$http.get('/customer').success(function(response){
+		$http.get('/customers').success(function(response){
 		data = response;
 
 	console.log('database email',data.email);
@@ -33,12 +38,12 @@ $scope.login = function(){
 		$scope.user = "";
 		
 
-	if(user.email !== data.email){
-		console.log('Sorry!')
+	if(user.email === data.email){
+		console.log('Success!')
 	}	
 	else
 	{
-		console.log('Success!');
+		console.log('Sorry!');
 	}
 	});	
 		
@@ -46,6 +51,13 @@ $scope.login = function(){
 	
 }//end of login function
 
-//console.log(found_user);
+
+	$scope.addContact = function(){
+		console.log($scope.contact);
+		$http.post('/customers', $scope.contact).success(function(response){
+			console.log(response);
+			refreshReg();
+		});	
+	};
 
 }])
