@@ -7,14 +7,15 @@ var bodyParser = require("body-parser");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
-app.get('/customers', function(req, res){
+app.get('/customers/:email', function(req, res){
+
+	console.log('THis is the email', req.params.email);
 	console.log('I received a GET request');
-	console.log('The request is ',req);
-	console.log('The response is ', res);
-	db.customers.find(function(err, docs){
+	db.customers.findOne({email:req.params.email},function(err, docs){
 		console.log(docs);
+
 		//res.json(docs);
-		res.send(JSON.stringify(docs[0]));
+		res.send(JSON.stringify(docs));
 	})
 });
 

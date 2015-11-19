@@ -24,40 +24,31 @@ refresh();
 var user ;
 
 
-$scope.login = function(){
-	var data = "";
-	user = $scope.user;
-	console.log('user email', user.email);
-	console.log('user password', user.password);
+$scope.login = login;
+$scope.addContact = addContact;
 
-		$http.get('/customers').success(function(response){
+function login(user){
+	var data = "";
+
+	$http.get('/customers/'+ user.email).success(function(response){
 		data = response;
 
-	console.log('database email',data.email);
-	console.log('database password',data.password);
-		$scope.user = "";
-		
-
-	if(user.email === data.email){
-		console.log('Success!')
-	}	
-	else
-	{
-		console.log('Sorry!');
-	}
+		if(user.email === data.email){
+			console.log('Success!')
+		}	
+		else
+		{
+			throw Error('Sorry!');
+		}
+		refresh();
 	});	
-		
-	refresh();
-	
+
 }//end of login function
 
-
-	$scope.addContact = function(){
-		console.log($scope.contact);
-		$http.post('/customers', $scope.contact).success(function(response){
-			console.log(response);
-			refreshReg();
-		});	
-	};
-
-}])
+function addContact(){
+	console.log($scope.contact);
+	$http.post('/customers', $scope.contact).success(function(response){
+		console.log(response);
+		refreshReg();
+	});	
+}

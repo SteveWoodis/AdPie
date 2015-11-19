@@ -1,0 +1,24 @@
+{
+  "name": "AdPie",
+  "description": "Marketing and Advertising",
+  "main": "server.js",
+  "authors": [
+    "Steve Woodis"
+  ],
+  "license": "{ \"license\" : \"BSD-3-Clause\" }",
+  "keywords": [
+    "Adpie",
+    "Marketing"
+  ],
+  "homepage": "https://github.com/SteveWoodis/AdPie",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ]
+}
