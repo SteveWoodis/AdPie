@@ -1,4 +1,3 @@
 var app = angular.module('AdPieApp');
-app.controller('AdPieCtrl', function($scope){
-	
+app.controller('AdPieCtrl', function ($scope) {
 })
