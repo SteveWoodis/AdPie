@@ -1,5 +1,5 @@
- var app = angular.module('AdPieApp');
-app.controller('loginCtrl', ['$scope','$http', function($scope, $http){
+var app = angular.module('AdPieApp');
+app.controller('loginCtrl', function($scope, $http){
 
 var found_user;
 $scope.user = {
@@ -22,7 +22,6 @@ var refreshReg = function(){
 refresh();
 
 var user ;
-
 
 $scope.login = login;
 $scope.addContact = addContact;
@@ -51,4 +50,5 @@ function addContact(){
 		console.log(response);
 		refreshReg();
 	});	
-}
+}//end of addContact
+})

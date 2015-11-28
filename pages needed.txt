@@ -1,0 +1,6 @@
+Page 1: Landing - Show campaigns listed, secure the campaigns - must login
+Page 2: Registration Page
+Page 3: Login page
+Page 4: Profile Page
+page 5: campaigns
+page 6: campaign template page

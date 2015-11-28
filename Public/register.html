@@ -1,0 +1,53 @@
+<div>
+</br>
+</br>
+</br>
+</br>	
+</br>
+</br>
+</br>
+</br>
+<div>
+	<table class="table">
+		<tbody>
+			<thead>
+				<td>Fields with an <span id="red">*</span> are required. All others are optional.</td>
+			</thead>	
+			<tr>
+				<td id="red">*</td><td>Username:</td><td><input class="form-control" ng-model="contact.Username"></td>
+			</tr>
+			<tr>
+				<td id="red">*</td><td>Email:</td><td><input class="form-control" ng-model="contact.email"></td>
+			</tr>
+			<tr>	
+				<td id="red">*</td><td>Password:</td><td><input class="form-control" ng-model="contact.password"></td>
+			</tr>
+			<tr>
+				<td>Full Name:</td><td><input class="form-control" ng-model="contact.Full_Name"></td>
+			</tr>
+			<tr>
+			    <select class="tab" ng-model="contact.UserType">
+			        <option ng-repeat="contact in regUser" value="{{contact.clientId}}">{{contact.clientType}}</option>
+			    </select>     
+			</tr>
+			<tr>
+				<td id="red">*</td><td>Creator Category:</td><td><input class="form-control" ng-model="contact.Creator_Category"></td>
+			</tr>
+			<tr>
+				<td>Creator Sub-Category:</td><td><input class="form-control" ng-model="contact.Creator_Sub_Category"></td>
+			</tr>
+			<tr>
+				<td>Work Experience:</td><td><input class="form-control" ng-model="contact.Work_Experience"></td>
+			</tr>
+			<tr>
+				<td>Portfolio:</td><td><input class="form-control" ng-model="contact.Portfolio"></td>
+			</tr>
+			<tr>
+				<td>Links:</td><td><input class="form-control" ng-model="contact.Links"></td>
+			</tr>
+			<tr>
+				<td><button class="btn btn-info" ng-click="addContact()">Register</td>
+			<tr>
+		</tbody>	
+	</table>
+</div>

@@ -17,6 +17,10 @@ app.config(function($routeProvider){
         templateUrl: '/about.html',
         controller: 'aboutCtrl'
     })	
+    .when('/register', {
+        templateUrl: 'register.html',
+        controller: 'registerCtrl'
+    })
 	.when('/landing', {
         templateUrl: '/landing.html',
         controller: 'landingCtrl'
