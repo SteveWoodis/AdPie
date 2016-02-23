@@ -1,4 +1,4 @@
-var app = angular.module('AdPieApp', ['ngRoute']);
+var app = angular.module('AdPieApp', ['ngRoute','nvd3ChartDirectives']);
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/login', {
@@ -6,7 +6,7 @@ app.config(function($routeProvider){
 		controller:'loginCtrl'
 	}).when('/business', {
         templateUrl: '/business.html',
-        controller: 'businessCtrl'
+        controller: 'BusinessCtrl'
     }).when('/customers', {
         templateUrl: '/customers.html',
         controller: 'customersCtrl'

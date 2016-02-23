@@ -1,0 +1,30 @@
+function box (){
+	//get parent
+	//create div
+	//give it a class
+	//append to dom in parent
+
+
+
+
+
+}
+
+#parent{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: fixed;
+	bottom: 0;
+	left:0;
+}
+.child {
+	background: yellow;
+	height: 50px;
+	width: 50px;
+}
+
+<button on-click="box()">Click</button>
+<div id="parent">
+	<div class="child">
+	<div class="child">

@@ -1,5 +1,5 @@
 var app = angular.module('AdPieApp');
-app.controller('loginCtrl', function($scope, $http){
+app.controller('loginCtrl', function($scope, $http, $location){
 
 var found_user;
 $scope.user = {
@@ -33,8 +33,8 @@ function login(user){
 		data = response;
 
 		if(user.email === data.email){
-			console.log('Success!')
-		}	
+			//console.log('Success!')
+			$location.path('/business')}
 		else
 		{
 			throw Error('Sorry!');
