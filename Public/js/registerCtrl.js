@@ -37,5 +37,12 @@ function addContact(){
 }//end of addContact
 
 
+function addContact(){
+	console.log($scope.contact);
+	$http.post('/customers', $scope.contact).success(function(response){
+		console.log(response);
+		refreshReg();
+	});
+	}
 
 })

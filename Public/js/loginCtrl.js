@@ -1,4 +1,4 @@
-var app = angular.module('AdPieApp');
+ var app = angular.module('AdPieApp');
 app.controller('loginCtrl', function($scope, $http, $location){
 
 var found_user;
@@ -6,7 +6,6 @@ $scope.user = {
 				email:"",
 				password:"" 
 			  };
-
 console.log('You made it to loginCtrl');
 
 var refresh = function(){
@@ -23,8 +22,9 @@ refresh();
 
 var user ;
 
+
 $scope.login = login;
-$scope.addContact = addContact;
+$scope.Register = Register;
 
 function login(user){
 	var data = "";
@@ -33,8 +33,9 @@ function login(user){
 		data = response;
 
 		if(user.email === data.email){
-			//console.log('Success!')
-			$location.path('/business')}
+			console.log('Success!')
+			$location.path('/content_creator');
+		}	
 		else
 		{
 			throw Error('Sorry!');
@@ -44,11 +45,10 @@ function login(user){
 
 }//end of login function
 
-function addContact(){
-	console.log($scope.contact);
-	$http.post('/customers', $scope.contact).success(function(response){
-		console.log(response);
-		refreshReg();
-	});	
-}//end of addContact
+function Register(){
+	$location.path('/register');
+}	
+
+
 })
+//fixed loginCtrl on 3/26/16

@@ -44,6 +44,20 @@
 			</tr>
 			<tr>
 				<td>Links:</td><td><input class="form-control" ng-model="contact.Links"></td>
+
+			</tr>
+			<tr>
+				<td><select ng-model="registeredUser" ng-options="regUser for regUser in Classification"></select>
+				<script type='text/javascript'>
+  							function MyCtrl($scope) {
+   						 	$scope.Classification = ['Business', 'Content Creator'];
+    							$scope.referral = {
+      								Classification: $scope.Classification[1]
+    							};
+  							}
+</script>
+
+				</td>
 			</tr>
 			<tr>
 				<td><button class="btn btn-info" ng-click="addContact()">Register</td>
